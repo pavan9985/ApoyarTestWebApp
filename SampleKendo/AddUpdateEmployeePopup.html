@@ -1,0 +1,40 @@
+﻿<style>
+    .app-modal-window .modal-dialog {
+        width: 400px;
+        height: 450px;
+    }
+</style>
+
+<div>
+    <div class="modal-header">
+        <h3 ng-bind="HeaderName"></h3>
+    </div>
+    <div class="modal-body">
+        <label for="Empname">Name:</label>
+        <input type="text" id="EmpName" ng-model="EmpName" name="fname"><br>
+
+        <label for="fname">Email:</label>
+        <input type="text" id="fname" ng-model="Email" name="fname"><br>
+
+        <label for="fname">Password:</label>
+        <input type="text" id="fname" ng-model="Password" name="fname"><br>
+
+        <label for="fname">salary:</label>
+        <input type="text" id="fname" ng-model="Salary" name="fname"><br>
+
+        <label for="fname">IsActive:</label>
+        <input type="checkbox" id="fname" ng-model="IsActive" name="fname"><br>
+
+        <label for="fname">Departments:</label>
+        <select id="Departments" 
+                kendo-drop-down-list="DepartmentsList"
+                k-data-text-field="'deptname'"
+                k-data-value-field="'pkdeptid'"
+                k-data-source="Departmentssource"
+                ng-model="SelectedDept"></select>
+    </div>
+    <div class="modal-footer" style="text-align:center;">
+        <button class="btn btn-primary" ng-click="ok()" ng-bind="BtnName"></button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+﻿<style>
+    .app-modal-window .modal-dialog {
+        width: 400px;
+        height: 450px;
+    }
+</style>
+
+<div>
+    <div class="modal-header">
+        <h3 ng-bind="HeaderName"></h3>
+    </div>
+    <div class="modal-body">
+        <label for="Empname">Departments Name:</label>
+        <input type="text" id="EmpName" ng-model="DeptName" name="fname"><br>
+
+        <label for="fname">IsActive:</label>
+        <input type="checkbox" id="fname" ng-model="DeptIsActive" name="fname"><br>
+
+        
+    </div>
+    <div class="modal-footer" style="text-align:center;">
+        <button class="btn btn-primary" ng-click="ok()" ng-bind="BtnName"></button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

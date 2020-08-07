@@ -1,0 +1,23 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.scc
+*.scss
+*.scssc
+/.vs/Git Web/v15/.suo
+*.lock
+/EMR_WEB/.vs/EMR_WEB/v15/Server/sqlite3
+/EMR_WEB/.vs/EMR_WEB/v15/.suo
+/EMR_WEB/EMR_WEB
+/EMR_WEB/packages
+/EMR_WEB/EMRWEB_LOGIN/obj/Release
+/.vs
+/EMR_WEB/.vs/config/applicationhost.config
+/EMR_WEB/.vs/slnx.sqlite
+/EMR_WEB/.vs/slnx.sqlite-journal
+/EMR_WEB/.vs/VSWorkspaceState.json
+/EMR_WEB/.vs
+/EMR_WEB/EMRWEB_LOGIN/obj/Debug
+/EMR_WEB/EMRWEB_LOGIN/bin
+/EMR_WEB/EMRWEB_LOGIN/NewClientRegistrationFromPortalView.html

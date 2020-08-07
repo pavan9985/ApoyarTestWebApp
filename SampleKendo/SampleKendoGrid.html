@@ -1,0 +1,17 @@
+﻿
+    <div>
+        <div>
+            <button style="text-align:left" ng-click="AddEmployee();" ng-enter="AddEmployee();">Add Employee</button>
+            <button style="text-align:left" ng-click="AddDept();" ng-enter="AddDept();">Add Dept</button>
+            <span style="padding-left: 950px;">Go To Department<a style="color: red;" href="" ng-click="ViewClick()" ng-bind="ViewData"></a></span>
+        </div>
+        
+        <div id="employees" ng-hide="ShowDepartmentView">
+            <div kendo-grid="SampleFirstGrid" id="SampleFirstGridID" options="SampleFirstGridOptions"></div>
+        </div>
+        <div id="Departments" ng-show="ShowDepartmentView">
+            <div kendo-grid="MainWidgets2.SampleDepartmentGrid" id="SampleDeployementGridID" options="SampleDepartmentGridOptions"></div>
+        </div>
+
+    </div>
+

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<script src="https://kendo.cdn.telerik.com/2020.2.617/js/jquery.min.js"></script>
+<link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link data-require="bootstrap-css@3.*" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+<script data-require="ui-bootstrap@*" data-semver="2.5.0" src="https://cdn.rawgit.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-tpls-2.5.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.min.js.map"></script>
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.default-v2.min.css" />
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.common.min.css" />
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.blueopal.min.css" />
+<script src="https://kendo.cdn.telerik.com/2020.2.617/js/kendo.all.min.js"></script>
+<script src="SampleKendo/Services.js"></script>
+<script src="SampleKendo/sampleKendoGridDirective.js"></script>
+
+<body ng-app="SampleApp" ng-controller="sampleKendoGridDController">
+    <div ng-show="ShowLogin">
+        <h2 style="text-align: center;">Login Form</h2>
+        <form>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" ng-model="username" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" ng-model="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" style="text-align: center;" ng-click="Login()">Login</button>
+            </div>
+            <div align="center">
+                <label ng-click="ForgotPassword()" style="text-align: center;">Forgot Password?</label>
+            </div>
+        </form>
+        
+    </div>
+    <div sample-kendo-grid-directive ng-hide="ShowLogin">
+    </div>
+</body>
+
+</html>
